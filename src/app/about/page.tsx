@@ -436,7 +436,7 @@ export default function About() {
                       align="center"
                       paddingTop="xs"
                     >
-                      {skill.title}
+                      {skill ? skill.title : ""}
                     </Text>
                   </Column>
                 ))}
