@@ -39,11 +39,6 @@ const social = [
     link: "https://www.linkedin.com/in/neelakandan-c-36445921b",
   },
   {
-    name: "X",
-    icon: "x",
-    link: "",
-  },
-  {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
@@ -250,38 +245,329 @@ const about = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
-        ),
+        title: "HTML",
+        description: <></>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/assets/html.svg",
+            alt: "html",
+            width: 5,
+            height: 5,
           },
+        ],
+      },
+      {
+        title: "CSS",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/assets/css.svg",
+            alt: "css",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      ,
+      {
+        title: "Bootstrap",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/bootstrap.svg",
+            alt: "bootstrap",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      ,
+      {
+        title: "Javascript",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/javascript.svg",
+            alt: "Javascript",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Typescript",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/typescript.svg",
+            alt: "Typescript",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Python",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/python.svg",
+            alt: "Python",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "React.js",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/react.svg",
+            alt: "react",
+            width: 5,
+            height: 5,
           },
         ],
       },
       {
         title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
-        ),
+        description: <></>,
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/assets/nextjs.svg",
+            alt: "nextjs",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Material UI",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/mui.svg",
+            alt: "mui",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Redux.js",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/redux.svg",
+            alt: "redux",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "React Native",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/react.svg",
+            alt: "reactNative",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Babylon.js",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/babylonjs.svg",
+            alt: "babylonjs",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Three.js",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/threejs.svg",
+            alt: "threejs",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Node.js",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/nodejs.svg",
+            alt: "nodejs",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Express.js",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/express.svg",
+            alt: "express",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "MongoDB",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/mongodb.svg",
+            alt: "mongodb",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "MySQL",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/mysql.svg",
+            alt: "mysql",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Solidity",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/solidity.svg",
+            alt: "Solidity",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Web 3.0",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/web3.png",
+            alt: "web3",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Truffle",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/truffle.png",
+            alt: "truffle",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "AWS",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/aws.svg",
+            alt: "aws",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Git",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/git.svg",
+            alt: "git",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Github",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/github.svg",
+            alt: "github",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Gitlab",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/gitlab.svg",
+            alt: "truffle",
+            width: 5,
+            height: 5,
+          },
+        ],
+      },
+      {
+        title: "Postman",
+        description: <></>,
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/assets/postman.svg",
+            alt: "postman",
+            width: 5,
+            height: 5,
           },
         ],
       },
@@ -310,7 +596,7 @@ const work = {
 const gallery = {
   path: "/gallery",
   label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
+  title: `Photo gallery - ${person.name}`,
   description: `A photo collection by ${person.name}`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own

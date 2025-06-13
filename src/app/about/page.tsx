@@ -47,7 +47,9 @@ export default function About() {
     {
       title: about.technical.title,
       display: about.technical.display,
-      items: about.technical.skills.map((skill) => skill.title),
+      items: about.technical.skills
+        .filter((skill) => skill !== undefined)
+        .map((skill) => skill.title),
     },
   ];
   return (
@@ -175,6 +177,7 @@ export default function About() {
                           label={item.name}
                           size="s"
                           variant="secondary"
+                          target="_blank"
                         />
                         <IconButton
                           className="s-flex-show"
@@ -281,7 +284,7 @@ export default function About() {
                         )
                       )}
                     </Column> */}
-                    {experience.images.length > 0 && (
+                    {/* {experience.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
                         {experience.images.map((image, index) => (
                           <Flex
@@ -306,7 +309,7 @@ export default function About() {
                           </Flex>
                         ))}
                       </Flex>
-                    )}
+                    )} */}
                   </Column>
                 ))}
               </Column>
@@ -355,42 +358,89 @@ export default function About() {
               >
                 {about.technical.title}
               </Heading>
-              <Column fillWidth gap="l">
+              <Flex fillWidth gap="l" wrap>
                 {about.technical.skills.map((skill, index) => (
-                  <Column key={`${skill}-${index}`} fillWidth gap="4">
-                    <Text variant="heading-strong-l">{skill.title}</Text>
+                  <Column
+                    key={`${skill}-${index}`}
+                    gap="0"
+                    minWidth={5}
+                    style={{ marginRight: "20px" }}
+                    wrap
+                  >
+                    {/* <Text variant="heading-strong-l">{skill.title}</Text>
                     <Text variant="body-default-m" onBackground="neutral-weak">
                       {skill.description}
-                    </Text>
-                    {skill.images && skill.images.length > 0 && (
-                      <Flex fillWidth paddingTop="m" gap="12" wrap>
+                    </Text> */}
+                    {skill && skill.images && skill.images.length > 0 && (
+                      <Flex width={5} paddingTop="xs" gap="2" wrap>
                         {skill.images.map((image, index) => (
                           <Flex
                             key={index}
-                            border="neutral-medium"
-                            radius="m"
+                            direction="column"
+                            // border="neutral-medium"
+                            // overflow="hidden"
+                            padding="s"
+                            radius="l"
+                            onBackground="neutral-weak"
+                            style={{
+                              // backgroundColor: "rgb(237, 237, 237)",
+                              background:
+                                "linear-gradient(135deg, #0d1b2a,rgb(17, 45, 98))",
+                              position: "relative",
+                              boxShadow: "0 4px 12px rgba(0, 0, 0, 0.08)",
+                            }}
                             //@ts-ignore
                             minWidth={image.width}
                             //@ts-ignore
                             height={image.height}
                           >
                             <SmartImage
-                              enlarge
-                              radius="m"
+                              // enlarge
+                              radius="l"
                               //@ts-ignore
                               sizes={image.width.toString()}
                               //@ts-ignore
                               alt={image.alt}
                               //@ts-ignore
                               src={image.src}
+                              objectFit="contain"
                             />
+                            <Flex
+                              key={index}
+                              radius="l"
+                              onBackground="neutral-strong"
+                              style={{
+                                background:
+                                  "linear-gradient(135deg, #0d1b2a,rgb(24, 58, 120))",
+                                position: "absolute",
+                                height: "100%",
+                                width: "100%",
+                                top: 0,
+                                left: 0,
+                                zIndex: -1,
+                                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.4)",
+                                transform:
+                                  "rotate(12deg) translate(12px, -14px)",
+                              }}
+                              //@ts-ignore
+                              minWidth={image.width}
+                              //@ts-ignore
+                              height={image.height}
+                            ></Flex>
                           </Flex>
                         ))}
                       </Flex>
                     )}
+                    <Text
+                      variant="body-strong-m"
+                      align="center"
+                      paddingTop="xs"
+                    >
+                      {skill.title}
+                    </Text>
                   </Column>
                 ))}
-              </Column>
+              </Flex>
             </>
           )}
         </Column>

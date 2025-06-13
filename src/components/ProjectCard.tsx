@@ -32,8 +32,17 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <Column fillWidth gap="m">
+      {title && (
+        <Flex flex={12}>
+          <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+            {title}
+          </Heading>
+        </Flex>
+      )}
       <Carousel
+        aspectRatio="16 / 8"
         sizes="(max-width: 960px) 100vw, 960px"
+        // style={{ height: "auto", maxHeight: "600px", objectFit: "contain" }}
         images={images.map((image) => ({
           src: image,
           alt: title,
@@ -47,18 +56,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         paddingBottom="24"
         gap="l"
       >
-        {title && (
-          <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
-              {title}
-            </Heading>
-          </Flex>
-        )}
-        {(avatars?.length > 0 || description?.trim() || content?.trim()) && (
-          <Column flex={7} gap="16">
-            {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
+        {(description?.trim() || content?.trim()) && (
+          <Column flex={12} gap="16">
+            {/* {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />} */}
             {description?.trim() && (
-              <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+              <Text
+                wrap="balance"
+                variant="body-default-s"
+                onBackground="neutral-weak"
+              >
                 {description}
               </Text>
             )}
