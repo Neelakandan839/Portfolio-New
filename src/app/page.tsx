@@ -30,7 +30,7 @@ export async function generateMetadata() {
 
 export default function Home() {
   return (
-    <Column maxWidth="l" gap="xl" horizontal="center">
+    <Column maxWidth="xl" gap="xl" horizontal="center">
       <Schema
         as="webPage"
         baseURL={baseURL}
@@ -44,9 +44,16 @@ export default function Home() {
           image: `${baseURL}${person.avatar}`,
         }}
       />
-      <Column fillWidth paddingY="24" gap="m">
-        <Column maxWidth="m">
-          {/* {home.featured && (
+      <Column fillWidth paddingY="8" gap="m">
+        <Flex
+          flex={12}
+          mobileDirection="column"
+          gap="32"
+          horizontal="space-between"
+        >
+          <Flex flex={8}>
+            <Column maxWidth="m" gap="16" style={{ textAlign: "center" }}>
+              {/* {home.featured && (
             <RevealFx
               fillWidth
               horizontal="start"
@@ -67,58 +74,140 @@ export default function Home() {
               </Badge>
             </RevealFx>
           )} */}
-          <RevealFx
-            translateY="4"
-            fillWidth
-            horizontal="start"
-            paddingBottom="24"
-          >
-            <Heading wrap="balance" variant="display-strong-m">
-              {home.headline}
-            </Heading>
-          </RevealFx>
-          <RevealFx
-            translateY="8"
-            delay={0.2}
-            fillWidth
-            horizontal="start"
-            paddingBottom="32"
-          >
-            <Text
-              wrap="balance"
-              onBackground="neutral-weak"
-              variant="heading-default-l"
-            >
-              {home.subline}
-            </Text>
-          </RevealFx>
-          <RevealFx
-            paddingTop="12"
-            delay={0.4}
-            horizontal="start"
-            paddingLeft="12"
-          >
-            <Button
-              id="about"
-              data-border="rounded"
-              href={about.path}
-              variant="secondary"
-              size="m"
-              arrowIcon
-            >
-              <Flex gap="8" vertical="center">
-                {about.avatar.display && (
-                  <Avatar
-                    style={{ marginLeft: "-0.75rem", marginRight: "0.25rem" }}
-                    src={person.avatar}
-                    size="m"
-                  />
-                )}
-                {about.title}
-              </Flex>
-            </Button>
-          </RevealFx>
-        </Column>
+              <RevealFx
+                translateY="4"
+                fillWidth
+                horizontal="start"
+                paddingBottom="4"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+                <Heading wrap="balance" variant="display-default-xs">
+                  Hi, I Am
+                </Heading>
+              </RevealFx>
+              <RevealFx
+                translateY="4"
+                fillWidth
+                horizontal="start"
+                paddingBottom="8"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+                <Heading
+                  wrap="balance"
+                  variant="display-strong-l"
+                  style={{
+                    background: "linear-gradient(90deg, #FF8A00, #E52E71)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  NEELAKANDAN
+                </Heading>
+              </RevealFx>
+              <RevealFx
+                translateY="4"
+                fillWidth
+                horizontal="start"
+                paddingBottom="40"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+                <Heading
+                  wrap="balance"
+                  variant="display-default-xs"
+                  onBackground="brand-medium"
+                >
+                  Full Stack Web & App Developer
+                </Heading>
+              </RevealFx>
+              <RevealFx
+                translateY="4"
+                fillWidth
+                horizontal="start"
+                paddingBottom="12"
+              >
+                <Heading wrap="balance" variant="display-strong-s">
+                  {home.headline}
+                </Heading>
+              </RevealFx>
+              <RevealFx
+                translateY="4"
+                fillWidth
+                horizontal="start"
+                paddingBottom="24"
+              >
+                <Text variant="body-default-xl" onBackground="neutral-weak">
+                  Full Stack Developer with 3+ years of experience in Web,
+                  Mobile, 3D/VR, AI, and Blockchain. Passionate about building
+                  scalable, immersive, and user-centric digital experiences.
+                </Text>
+                {/* <Heading wrap="balance" variant="display-default-xs">
+                  Full Stack Developer with 3+ years of experience in Web,
+                  Mobile, 3D/VR, AI, and Blockchain. Passionate about building
+                  scalable, immersive, and user-centric digital experiences.
+                </Heading> */}
+              </RevealFx>
+              {/* <RevealFx
+                translateY="8"
+                delay={0.2}
+                fillWidth
+                horizontal="start"
+                paddingBottom="32"
+              >
+                <Text
+                  wrap="balance"
+                  onBackground="neutral-weak"
+                  variant="heading-default-s"
+                >
+                  {home.subline}
+                </Text>
+              </RevealFx> */}
+              <RevealFx
+                paddingTop="12"
+                delay={0.4}
+                horizontal="start"
+                paddingLeft="12"
+                style={{ display: "flex", justifyContent: "center" }}
+              >
+                <Button
+                  id="about"
+                  data-border="rounded"
+                  href={about.path}
+                  variant="secondary"
+                  size="m"
+                  arrowIcon
+                >
+                  <Flex gap="8" vertical="center">
+                    {about.avatar.display && (
+                      <Avatar
+                        style={{
+                          marginLeft: "-0.75rem",
+                          marginRight: "0.25rem",
+                        }}
+                        src={person.avatar}
+                        size="m"
+                      />
+                    )}
+                    {about.title}
+                  </Flex>
+                </Button>
+              </RevealFx>
+            </Column>
+          </Flex>
+          <Flex flex={4}>
+            <Column maxWidth="s">
+              <img
+                src="/images/avatar4.png"
+                alt="Preview"
+                width={"100%"}
+                height={"100%"}
+                style={{
+                  borderRadius: "var(--radius-xl)",
+                  border: "1px solid var(--border-neutral-alpha-medium)",
+                }}
+              />
+            </Column>
+          </Flex>
+        </Flex>
       </Column>
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />

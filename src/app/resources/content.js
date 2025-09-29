@@ -15,7 +15,7 @@ const person = {
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
@@ -88,7 +88,7 @@ const home = {
 const about = {
   path: "/about",
   label: "About",
-  title: `About - ${person.name}`,
+  title: `About Me`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
     display: true,
@@ -136,6 +136,25 @@ const about = {
         role: "Senior Software Development Engineer",
         achievements: [
           {
+            title: "🔷  AI-Powered Tools",
+            description: [
+              <>
+                Built Aira, an AI review assistant that fetches Google reviews
+                and posts AI-generated replies automatically, streamlining
+                business review management.
+              </>,
+              <>
+                Developed Concierge, an AI chatbot for real estate, capable of
+                handling customer queries, capturing leads, and showcasing 3D
+                floor plans of real estate projects.
+              </>,
+              <>
+                Implemented a dynamic dashboard for Concierge to manage chat
+                insights, campaigns, subscriptions, and agent assignments.
+              </>,
+            ],
+          },
+          {
             title: "🔷  3D & VR/XR Web Development",
             description: [
               <>
@@ -159,25 +178,6 @@ const about = {
               <>
                 Designed and managed smart contracts, and successfully minted
                 NFTs for real estate-based digital assets.
-              </>,
-            ],
-          },
-          {
-            title: "🔷  AI-Powered Tools",
-            description: [
-              <>
-                Built Aira, an AI review assistant that fetches Google reviews
-                and posts AI-generated replies automatically, streamlining
-                business review management.
-              </>,
-              <>
-                Developed Concierge, an AI chatbot for real estate, capable of
-                handling customer queries, capturing leads, and showcasing 3D
-                floor plans of real estate projects.
-              </>,
-              <>
-                Implemented a dynamic dashboard for Concierge to manage chat
-                insights, campaigns, subscriptions, and agent assignments.
               </>,
             ],
           },
